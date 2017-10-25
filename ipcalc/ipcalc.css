@@ -1,0 +1,77 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  background: #4a4a4a;
+  color: #FFFFFF;
+  font: small-caps 1.2em 'Lato', Arial, Helvetica, sans-serif;
+}
+
+header {
+  text-align: center;
+}
+
+input, input:focus {
+  background: none;
+  border: none;
+  outline: none;
+  color: inherit;
+}
+
+.ipSection {
+  text-align: center;
+  color: #a5a5a5;
+}
+
+.ipSection input, .subnetsSection #subnetsPrompt {
+  font-family: 'Open Sans', courier, monospace;
+  font-weight: 300;
+  font-size: 1.75em;
+}
+
+.ipSection > #ip {
+  text-align: right;
+  width: 70%;
+  color: #FFFFFF;
+}
+
+.ipSection > #maskPrompt {
+  width: 20%;
+}
+
+.subnetsSection {
+  text-align: right;
+}
+
+.subnetsSection #subnetsPrompt {
+  width: 20%;
+  color: #a5a5a5;
+}
+
+table tr > td:nth-of-type(1) {
+  text-align: right;
+  font-size: 60%;
+}
+
+.info, .subnetsInfo, #subnets tr, #subnets {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+  background: rgba(255,255,255,0.2);
+  width: 80%;
+  margin: 20px auto;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+@media screen and (min-width: 800px) {
+  main {
+    width: 80%;
+    margin: 0 auto;
+  }
+  #info  {
+    display: flex;
+  }
+
+  #info > * {
+    width: 40%;
+    margin: auto;
+  }
+}

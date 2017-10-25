@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>IP Calc</title>
+    <link rel="stylesheet" href="ipcalc.css">
+    <script src="ipcalc.js" charset="utf-8"></script>
+  </head>
+  <body>
+    <header>
+      <h1>Subnet calculator</h1>
+    </header>
+    <main>
+      <div class="ipSection">
+        <input type="text" id="ip" placeholder="IP address" value="127.0.0.1" autocomplete="off" autofocus>/<input type="text" id="maskPrompt" placeholder="CIDR" value="24" autocomplete="off">
+      </div>
+      <div class="subnetsSection">
+        <label for="subnetsPrompt">Subnets #: </label><input type="text" id="subnetsPrompt" placeholder="No. #" value="5" autocomplete="off">
+      </div>
+      <div id="output">
+        <div id="info">
+          <table class="info">
+            <tr>
+              <td>Adress</td>
+              <td id="address">127.0.0.1</td>
+            </tr>
+            <tr>
+              <td>CIDR mask</td>
+              <td id="cidr">24</td>
+            </tr>
+            <tr>
+              <td>Decimal mask</td>
+              <td id="mask">255.255.255.0</td>
+            </tr>
+            <tr>
+              <td>Network address</td>
+              <td id="networkAddress">127.0.0.0</td>
+            </tr>
+            <tr>
+              <td>Broadcast address</td>
+              <td id="broadcastAddress">127.0.0.255</td>
+            </tr>
+            <tr>
+              <td>Number of hosts</td>
+              <td id="numberOfHosts">254</td>
+            </tr>
+          </table>
+          <table class="subnetsInfo">
+            <tr>
+              <td>Decimal mask</td>
+              <td id="subnetMask">255.255.255.224</td>
+            </tr>
+            <tr>
+              <td>Subnet CIDR Mask</td>
+              <td id="subnetCIDR">27</td>
+            </tr>
+            <tr>
+              <td>Hop</td>
+              <td id="subnetHop">32</td>
+            </tr>
+            <tr>
+              <td>Used subnets</td>
+              <td id="usedSubnets">5</td>
+            </tr>
+            <tr>
+              <td>Unused subnets</td>
+              <td id="unusedSubnets">3</td>
+            </tr>
+            <tr>
+              <td>Number of hosts in subnet</td>
+              <td id="numberOfHostsInSubnet">30</td>
+            </tr>
+          </table>
+        </div>
+        <table id="subnets">
+          <tbody>
+            <tr>
+              <td>#1</td><td>127.0.0.0/27</td>
+            </tr>
+            <tr>
+              <td>#2</td><td>127.0.0.32/27</td>
+            </tr>
+            <tr>
+              <td>#3</td><td>127.0.0.64/27</td>
+            </tr>
+            <tr>
+              <td>#4</td><td>127.0.0.96/27</td>
+            </tr>
+            <tr>
+              <td>#5</td><td>127.0.0.128/27</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </main>
+  </body>
+</html>
